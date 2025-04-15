@@ -1,6 +1,6 @@
 provider "aws" {
   region = "us-east-1"
-  profile = "AdministratorAccess-588738575824"
+#   profile = "AdministratorAccess-588738575824"
 }
 
 resource "aws_instance" "flask_server" {
