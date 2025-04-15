@@ -25,8 +25,16 @@ app.register_blueprint(history_bp)
 
 if __name__ == '__main__':
     db.create_all()
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
 
 @app.route('/')
 def index():
     return {'message': 'CareerPilot Flask API is up and running!'}
+
+@app.route('/generate-question')
+def generate_question():
+    return jsonify({
+        "question": "Tell me about yourself.",
+        "type": "behavioral"
+    })
