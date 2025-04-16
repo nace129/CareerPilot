@@ -1,6 +1,5 @@
 provider "aws" {
   region = "us-east-1"
-#   profile = "AdministratorAccess-588738575824"
 }
 
 resource "aws_instance" "flask_server" {
@@ -8,7 +7,7 @@ resource "aws_instance" "flask_server" {
   instance_type = "t2.micro"
   key_name      = "backend-server-key"         # Replace with your EC2 key pair name
 
-  user_data = file("deploy_backend.sh")
+  user_data = file("${path.module}/deploy_backend.sh")
 
   tags = {
     Name = "CareerPilot-Backend"
