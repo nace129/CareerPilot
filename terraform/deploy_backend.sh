@@ -15,7 +15,7 @@ yum install -y python3 git
 
 # Clone the repo
 cd /home/ec2-user
-git clone https://github.com/YOUR_USERNAME/careerpilot.git
+git clone https://github.com/nace129/careerpilot.git
 cd careerpilot/backend
 
 # Install Python dependencies
